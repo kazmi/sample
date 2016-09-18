@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('about', 'AboutController@index');
+
+Route::post('about/store', 'AboutController@store');

@@ -8,7 +8,13 @@
 
 	<h1>About</h1>
 
-	<p>Hello, World</p>
+	<form method="POST" action="/about/store">
+		{{ csrf_field() }}
+		<label for="firstName">
+			<input type="text" name="firstName">
+		</label>
+	</form>
+
 
 </body>
 </html>
