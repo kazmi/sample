@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use App\Joke;
 use App\Http\Requests;
+use Illuminate\Http\Request;
 
 class AboutController extends Controller
 {
     public function index()
     {
-    	return view('about');
+    	$jokes = Joke::all();
+    	return view('about', compact('jokes'));
     }
 
     public function store(Request $request)
