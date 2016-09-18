@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('about', 'AboutController@index');
 
 Route::post('about/store', 'AboutController@store');
+
+// API
+
+Route::get('api/v1/jokes', 'JokeController@index');
