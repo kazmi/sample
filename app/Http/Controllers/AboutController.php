@@ -16,7 +16,10 @@ class AboutController extends Controller
 
     public function store(Request $request)
     {
-    	$name = $request->get('firstName');
-    	return $name;
+    	$joke = new Joke();
+    	$joke->content = $request->get('joke');
+    	$joke->save();
+
+    	return redirect()->back();
     }
 }

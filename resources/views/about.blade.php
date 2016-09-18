@@ -16,9 +16,9 @@
 
 	<form method="POST" action="/about/store">
 		{{ csrf_field() }}
-		<label for="firstName">
+		<label for="joke">
 			Write a Joke
-			<input type="text" name="firstName">
+			<input type="text" name="joke">
 		</label>
 
 		<button type=submit>Save Joke</button>
